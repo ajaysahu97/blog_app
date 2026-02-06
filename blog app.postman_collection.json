@@ -1,0 +1,232 @@
+{
+  "info": {
+    "_postman_id": "db9c9337-ec47-412a-a26c-75419c50a546",
+    "name": "blog app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51629224",
+    "_collection_link": "https://go.postman.co/collection/51629224-db9c9337-ec47-412a-a26c-75419c50a546?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "signup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "fullName",
+              "value": "y",
+              "type": "text",
+              "uuid": "370e50d6-a2d4-430c-8e0b-386b27007c79"
+            },
+            {
+              "key": "email",
+              "value": "ajay1234@gmail.com",
+              "type": "text",
+              "uuid": "f98aa5a7-607c-4ce3-a5b2-f80e4dab64a3"
+            },
+            {
+              "key": "userName",
+              "value": "userew",
+              "type": "text",
+              "uuid": "cc21c236-b6bb-4391-82fe-b08bb21900ab"
+            },
+            {
+              "key": "password",
+              "value": "ASaa.@#12",
+              "type": "text",
+              "uuid": "fadd9be3-d243-4edf-bf5d-cec5a80b214a"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "fb6030f2-c9a0-4b62-8c0c-90f53554ad97",
+              "src": "postman-cloud:///1f1028e8-e8f3-4ec0-8ab4-76459901523f"
+            },
+            {
+              "key": "address",
+              "value": "indore",
+              "type": "text",
+              "uuid": "5e554536-4117-4fa3-a3df-48e3fba6f154"
+            },
+            {
+              "key": "number",
+              "value": "8525625858",
+              "type": "text",
+              "uuid": "146b95be-8d05-4027-8735-442ebe463a0d"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/users/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"ajay1234@gmail.com\",\r\n    \"password\": \"ASaa.@#12\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/users/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "logout",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"ajay1234@gmail.com\",\r\n    \"password\": \"ASaa.@#12\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/users/logoutUser",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "logoutUser"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-user",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTg1ZGM5MWZhNDQ0OWU1OWEwN2EyODgiLCJlbWFpbCI6ImFqYXkxMjM0QGdtYWlsLmNvbSIsInVzZXJOYW1lIjoidXNlcmV3IiwiZnVsbE5hbWUiOiJ5IiwiaWF0IjoxNzcwMzgyMTU0LCJleHAiOjE3NzA0Njg1NTR9.-W8EdmZeFi2d_jqGWnwXQNFYLStc3bX3jHAnBXD44ZQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"fullName\":\"vijay\",\r\n    \"address\":\"bhopal\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/users/update-profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "update-profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-avatar",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTg1ZGM5MWZhNDQ0OWU1OWEwN2EyODgiLCJlbWFpbCI6ImFqYXkxMjM0QGdtYWlsLmNvbSIsInVzZXJOYW1lIjoidXNlcmV3IiwiZnVsbE5hbWUiOiJ5IiwiaWF0IjoxNzcwMzgyMTU0LCJleHAiOjE3NzA0Njg1NTR9.-W8EdmZeFi2d_jqGWnwXQNFYLStc3bX3jHAnBXD44ZQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "59a6d650-e2ee-4f67-9638-11c957d902a0",
+              "src": "postman-cloud:///1f102996-ad65-4800-a4cd-6082e91bc1d5"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/users/update-avatar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "update-avatar"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
